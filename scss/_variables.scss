@@ -1,0 +1,38 @@
+$primaryColor: #172c3c;
+$secondaryColor: #cc6d61;
+$thirdColor: #65bcff;
+$primaryTextColor: #e2c56f;
+$secondaryTextColor: #99abff;
+$alertTextColor: #d96831;
+$whiteColor: #cdf8ff;
+
+$fontFamily:  "Passion One", sans-serif;
+
+$normalText:2rem;
+$mediaText:1.8rem;
+$phoneText:1.6rem;
+
+
+%normal__text{
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-style: $normalText;
+    margin: 0;
+    line-height: 1;
+}
+
+%bold__text{
+    font-family: $fontFamily;
+    font-weight: 700;
+    font-style: $normalText;
+    margin: 0;
+    line-height: 1;
+}
+
+%a_text_format{
+    font-family: $fontFamily;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0;
+    line-height: 1;
+}
