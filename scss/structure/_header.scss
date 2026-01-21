@@ -17,6 +17,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $whiteColor;
 }
 
 .header{
@@ -24,8 +25,13 @@ body{
     padding: 2%;
     box-sizing: border-box;
     width: 100%;
+    height: $heightHeader;
     height: auto;
-    background-color: $primaryColor !important;
+    background-color: $primaryColorHeader !important;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
     .header__structure{
         @include flexbox_row(space-between,center);
         .header__logo{
@@ -42,30 +48,37 @@ body{
             h1{
                 @extend %a_text_format;
                 font-size: px-to-rem(48);
-                color: $primaryTextColor;
+                color: $primaryColorTextHeader;
 
             }
         }
-        .header__search{
-            width: 30%;
-            input[type='search']{
-                background-color: $primaryColor;
-                color:$primaryTextColor;
-                &::placeholder{
-                    color: $secondaryTextColor;
+        
+        .header__options{
+            @include flexbox_row(flex-end,center);
+            width: 50rem;
+            gap:1rem;
+            .header__search{
+                width: 100%;
+                input[type='search']{
+                    background-color: $primaryColorHeader;
+                    color:$primaryColorTextHeader;
+                    font-size: px-to-rem(24);
+                    &::placeholder{
+                        color: $secondaryColor;
+                    }
                 }
-            }
-            .btn{
-                border-color: $primaryTextColor;
-                color: $primaryTextColor;
-                &:hover{
-                    border-color: $primaryTextColor;
-                    background-color: $primaryTextColor;
-                    color:$whiteColor;
+                .btn{
+                    width: 8rem;
+                    border-color: $primaryColorTextHeader;
+                    color: $primaryColorTextHeader;
+                    font-size: px-to-rem(24);
+                    &:hover{
+                        border-color: $primaryColorTextHeader;
+                        background-color: $primaryColorTextHeader;
+                        color:$whiteColor;
+                    }
                 }
             }
         }
-
     }
-    
 }

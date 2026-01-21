@@ -1,17 +1,19 @@
-$primaryColor: #172c3c;
-$secondaryColor: #cc6d61;
-$thirdColor: #65bcff;
-$primaryTextColor: #e2c56f;
-$secondaryTextColor: #99abff;
-$alertTextColor: #d96831;
-$whiteColor: #cdf8ff;
+$primaryColorHeader: #172c3c;
+$primaryColorTextHeader: #e2c56f;
+
+$whiteColor: #f5f7ff;
+$secondaryColor: #3eebf1;
+$alertTextColor: #f13e5e;
+$primaryTextColor: #020024;
 
 $fontFamily:  "Passion One", sans-serif;
+$transition_move: transform 1s ease, opacity 1s ease;
 
 $normalText:2rem;
 $mediaText:1.8rem;
 $phoneText:1.6rem;
 
+$heightHeader:12vh;
 
 %normal__text{
     font-family: $fontFamily;

@@ -14,7 +14,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <script src="/js/script.js" defer></script>
     <link rel="stylesheet" href="/scss/main.css">
-    <title>TV WIZARD</title>
+    <title>TV WIZARD: SERIES</title>
 </head>
 <body>
     <header class="header">
@@ -26,7 +26,7 @@
             <div class="header__options">
                 <form class="header__search d-flex" role="search">
                     <input id="searchinput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button id="searchbutton" class="btn" type="submit">Search</button>
+                    <button id="searchbutton" class="btn">Search</button>
                 </form>
             </div>
         </div>
@@ -34,7 +34,7 @@
     <main>
         <section class="series">
             <div class="series__title">
-                <h2>Recomendations</h2>
+                <h2>Series Search</h2>
             </div>
             <article class="series__recomendations">
                 <!-- <div class="card series__item">
@@ -57,6 +57,9 @@
             <div id="spinner" class="d-flex align-items-center">
                 <strong role="status">Loading...</strong>
                 <div class="spinner-border ms-auto" aria-hidden="true"></div>
+            </div>
+            <div id="not_found" class="d-flex align-items-center d-none">
+                <strong role="status">Serie Not Found</strong>
             </div>
         </section>
     </main>
