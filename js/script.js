@@ -216,10 +216,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     const page = path.split("/").pop();
     const params = new URLSearchParams(window.location.search);
     const query = params.get("query");
-    if (page === "index.html") {
-        loadRecomendations();
-    }else if (page.includes("series.html")){
+    if (page.includes("series.html")){
         loadSearch(query);
+    }else{
+        loadRecomendations();
     }
 });
 
