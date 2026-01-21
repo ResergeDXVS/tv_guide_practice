@@ -6,10 +6,10 @@
 }
 
 @mixin flexbox_column($justify, $align){
-    display: flex;
-    flex-direction: column;
-    justify-content: $justify;
-    align-items: $align;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: $justify !important;
+    align-items: $align !important;
 }
 
 @function px-to-rem($px, $base: 16) {

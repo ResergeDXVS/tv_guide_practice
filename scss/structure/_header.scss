@@ -32,23 +32,54 @@ body{
     top:0;
     left: 0;
     z-index: 1000;
+    @include media_adjustments{
+        padding: 3%;
+    }
+    @include phone_adjustments{
+        padding:1%;
+        padding-bottom: 2rem;
+    }
     .header__structure{
+        width: 100%;
         @include flexbox_row(space-between,center);
+        @include phone_adjustments{
+            @include flexbox_column(center,center);
+        }
         .header__logo{
             @include flexbox_row(center,center);
             text-decoration: none;
             gap: 0.5rem;
+            @include media_adjustments{
+                gap: 0.2rem;
+            }
+            @include phone_adjustments{
+                gap: 0.2rem;
+            }
             img{
                 display: block;
                 margin: 0;
                 width: 60px;
                 height: 60px;
                 margin: 0.5rem;
+                @include media_adjustments{
+                    width: 80px;
+                    height: 80px;
+                }
+                @include phone_adjustments{
+                    width: 100px;
+                    height: 100px;
+                }
             }
             h1{
                 @extend %a_text_format;
-                font-size: px-to-rem(48);
+                font-size: px-to-rem(42);
                 color: $primaryColorTextHeader;
+                @include media_adjustments{
+                    font-size: px-to-rem(48);
+                }
+                @include phone_adjustments{
+                    display: none;
+                }
 
             }
         }
@@ -57,14 +88,35 @@ body{
             @include flexbox_row(flex-end,center);
             width: 50rem;
             gap:1rem;
+            @include media_adjustments{
+                width: 40%;
+            }
+            @include phone_adjustments{
+                @include flexbox_row(center,center);
+                width: 100%;
+            }
             .header__search{
                 width: 100%;
+                @include media_adjustments{
+                    width: 100%;
+                }
+                @include phone_adjustments{
+                    width: 90%;
+                    @include flexbox_row(center,center);
+                }
                 input[type='search']{
                     background-color: $primaryColorHeader;
                     color:$primaryColorTextHeader;
                     font-size: px-to-rem(24);
                     &::placeholder{
                         color: $secondaryColor;
+                    }
+                    @include media_adjustments{
+                        font-size: px-to-rem(18);
+                    }
+                    @include phone_adjustments{
+                        font-size: px-to-rem(18);
+                        width: 40vh;
                     }
                 }
                 .btn{
@@ -76,6 +128,12 @@ body{
                         border-color: $primaryColorTextHeader;
                         background-color: $primaryColorTextHeader;
                         color:$whiteColor;
+                    }
+                    @include media_adjustments{
+                        font-size: px-to-rem(18);
+                    }
+                    @include phone_adjustments{
+                        font-size: px-to-rem(18);
                     }
                 }
             }

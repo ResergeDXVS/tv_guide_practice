@@ -3,11 +3,25 @@
     padding-bottom: 4rem;
     gap: px-to-rem(16);
     background-color: $primaryColorHeader;
+    @include media_adjustments{
+        padding-bottom: 2rem;
+        gap: px-to-rem(16);
+    }
+    @include phone_adjustments{
+        padding: 1rem;
+        gap: px-to-rem(8);
+    }
     .footer__data{
         p{
             @extend %normal__text;
             color: $primaryColorTextHeader;
             font-size: px-to-rem(32);
+            @include media_adjustments{
+                font-size: px-to-rem(28);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(24);
+            }
         }
     }
     .footer__social{
@@ -18,6 +32,12 @@
         margin: 0;
         box-sizing: border-box;
         gap: px-to-rem(28);
+        @include media_adjustments{
+            font-size: px-to-rem(22);
+        }
+        @include phone_adjustments{
+            font-size: px-to-rem(16);
+        }
         .nav-item{
             .nav-link{
                 margin: 0;
@@ -30,6 +50,12 @@
                     display: flex;
                     align-items: center;
                     font-size: px-to-rem(32);
+                    @include media_adjustments{
+                        font-size: px-to-rem(28);
+                    }
+                    @include phone_adjustments{
+                        font-size: px-to-rem(24);
+                    }
                 }
             }
         }
@@ -40,10 +66,22 @@
             color: $primaryColorTextHeader;
             font-size: px-to-rem(32);
             padding: 0;
+            @include media_adjustments{
+                font-size: px-to-rem(28);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(24);
+            }
             a{
                 @extend %a_text_format;
                 color: $alertTextColor;
                 font-size: px-to-rem(32);
+                @include media_adjustments{
+                    font-size: px-to-rem(28);
+                }
+                @include phone_adjustments{
+                    font-size: px-to-rem(24);
+                }
             }
         }
     }
